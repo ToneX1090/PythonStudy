@@ -1,8 +1,8 @@
-segundos_input = float (input ("Digite o número em segundos que deseja calcular: "))
+segundos_input = float (input ("Digite o número que deseja calcular, em segundos: "))
 
 horas = segundos_input // 3600
 minutos = (segundos_input % 3600) // 60
-segundos = segundos_input % (minutos * 60)
+segundos = (segundos_input % 3600 ) % 60
 
 
 print(str(horas) + " horas")
