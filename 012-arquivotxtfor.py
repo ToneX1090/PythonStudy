@@ -7,4 +7,6 @@ for i in range(vezes):
 
     f.write(nome + "\n")
 
+    print(nome)
+
 f.close()
