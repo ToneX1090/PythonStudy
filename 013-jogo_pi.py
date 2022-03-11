@@ -1,10 +1,15 @@
 numero = int (input ("Infome o até qual numero deseja brincar: "))
-contador = 0
+contador = 1
 
+while contador <= numero:
 
-for i in range(numero):
+    if contador % 7 == 0:
 
-    if i % 7 = 0:
-        print ("PI")
+        print("PI")
+    
+    
     else:
-        print (i+1)
+
+        print(contador)
+    
+    contador = contador + 1
