@@ -13,15 +13,17 @@ temperaturas = arquivo.readlines()
 
 #Fazer a conversão
 
+newarchive = open("Celsius.txt" , "a")
+
 for temperatura in temperaturas:
 
     temperatura = float(temperatura)
 
-    farh = conversao(temperatura)
+    celcius = conversao(temperatura)
 
-    print(farh)
+    newarchive.write(str(celcius) + "\n")
 
-
+newarchive.close()
 
 
 
