@@ -21,7 +21,7 @@ for temperatura in temperaturas:
 
     celcius = conversao(temperatura)
 
-    newarchive.write(str(celcius) + "\n")
+    newarchive.write(str(celcius) + " ")
 
 newarchive.close()
 
