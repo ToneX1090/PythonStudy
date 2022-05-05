@@ -1,15 +1,20 @@
 import sys
 
-namelist = open(sys.argv[1] , "r")
+namelist = open(sys.argv[1] , "r" , encoding='utf-8')
 
 cont = dict()
 
 for name in namelist:
+
         realname = name.strip()
-        if realname in cont:
-            cont[realname] +=1
+        firstname = realname.split()[0]
+        #secondname = realname.split()[1]
+
+        if firstname in cont:
+            cont[firstname] +=1
         else:
-            cont[realname] = 1
+            cont[firstname] = 1
+
 for par in sorted (cont.items()):
     
     print(par)
