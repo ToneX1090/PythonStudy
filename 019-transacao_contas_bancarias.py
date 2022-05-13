@@ -1,10 +1,18 @@
-transacoes = ["12345 50", "98765 -10", "12345 -20", '98765 25']
+transacoes = [["12345", 50], ["98765", -10], ["12345", -20], ["98765", 25]]
 
-cont = dict()
+saldos = dict()
 
-for conta in transacoes:
+for transacao in transacoes:
 
-    contaunica = conta.strip()
+    contatrans = transacao[0]
+    valortrans = transacao[1]
 
+    #verifica se a chave já existe no dicionario
+    if contatrans in saldos:
+        #se sim, soma
+        saldos[contatrans] += valortrans
+    else:
+        #se não, atribui
+        saldos[contatrans] = valortrans  
 
-print (contaunica)
+print (saldos)
