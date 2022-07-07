@@ -4,7 +4,7 @@ def game():
 
     random_number = random.randint(1,100)
 
-    kick_number = int(input("Informe o numero que deseja chutar: "))
+    kick_number = int(input("Chute um numero entre 1 e 100: "))
 
     while random_number != kick_number:
 
