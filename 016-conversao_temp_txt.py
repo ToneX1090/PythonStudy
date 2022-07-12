@@ -11,7 +11,7 @@ def conversao(temperatura):
 arquivo = open(sys.argv[1] , "r")
 temperaturas = arquivo.readlines()
 
-#Fazer a conversão
+#Fazer a conversão // cria o txt "Celcius"
 
 newarchive = open("Celsius.txt" , "a")
 
