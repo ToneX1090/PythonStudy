@@ -2,7 +2,7 @@ import sys
 import requests
 
 cep = sys.argv[1]
-v_link = requests.get("https://viacep.com.br/ws/09091015/json/")
+v_link = requests.get("https://viacep.com.br/ws/"+cep+"/json/")
 v_json = v_link.json()
 
 if cep == v_json["cep"]:
