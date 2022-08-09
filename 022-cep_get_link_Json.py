@@ -9,3 +9,5 @@ print ("\nRua: " , v_json["logradouro"])
 print ("Cidade: " , v_json["localidade"])
 print ("Bairro: " , v_json["bairro"])
 print ("Estado: " , v_json["uf"])
+
+#09271460
