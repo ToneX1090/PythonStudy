@@ -1,0 +1,4 @@
+Milton Nabor is a programmer
+His salary is xxxk a year
+He is working in backend services.
+He is working in this company for x years.
