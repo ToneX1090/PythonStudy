@@ -1,9 +1,10 @@
 import sys
 
 archive=open(sys.argv[1], "r")
-
-numbers = archive.readlines()
 int_numbers = []
+numbers = archive.readlines()
+
+newarchive = open("sortednumbers.txt" , "w")
 
 for number in numbers:
 
@@ -11,7 +12,13 @@ for number in numbers:
 
     int_numbers.append(realnumber)
 
-print(sorted(int_numbers))
+sorted_numbers = sorted(int_numbers)    
+
+for number in sorted_numbers:
+
+    newarchive.write(f'{str(number)}\n')
+
+newarchive.close()
 
 
 
