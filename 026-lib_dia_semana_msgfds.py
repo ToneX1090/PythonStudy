@@ -1,11 +1,20 @@
-import datetime
+from datetime import date
 
-day = datetime.date.today().day
-year = datetime.date.today().year
-month = datetime.date.today().month
-week = ("Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo")
-day_week = ("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
+#Como esta função date.today().weekday() devolve um numero de 0 à 6, é nevessário criar uma lista para pegar o nome por indice.
+days = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
+#Indice----0----------1---------2--------3---------4---------5---------6-----
 
-#verifica se qual dia é hoje "padrão americano aaaa/mm/dd"
-num = datetime.date(ano, mês, dia).weekday()
-p = (sem[num])
+week_day = date.today().weekday()
+
+#os finais de semana são os indices 5 e 6, por este motivo, tudo menor que isso é dia útil.
+if week_day < 4:
+
+    print(f"Hoje é dia útil, feliz {days[week_day]}-Feira")
+
+elif week_day == 4:
+
+    print("Sextoooooou meu patrão !")
+
+else:
+    
+    print(f"Hoje é {days[week_day]}, aproveite seu fim de semana.")
