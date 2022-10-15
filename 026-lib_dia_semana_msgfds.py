@@ -9,7 +9,7 @@ week_day = date.today().weekday()
 #os finais de semana são os indices 5 e 6, por este motivo, tudo menor que isso é dia útil.
 if week_day < 4:
 
-    print(f"Hoje é dia útil, feliz {days[week_day]}-Feira")
+    print(f"Hoje é dia útil, tenha uma ótima {days[week_day]}-Feira")
 
 elif week_day == 4:
 
