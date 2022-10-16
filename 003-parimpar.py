@@ -1,3 +1,4 @@
+# Respond if the number given by the user is even or odd
 entrada = float( input ("Informe o numero a ser informado: "))
 contador = 0
 
