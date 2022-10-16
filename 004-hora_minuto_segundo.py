@@ -1,3 +1,4 @@
+#Given a number in seconds, divide between hours, minutes and seconds.
 segundos_input = float (input ("Digite o número que deseja calcular, em segundos: "))
 
 horas = segundos_input // 3600
