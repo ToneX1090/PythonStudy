@@ -1,3 +1,4 @@
+#Calculates the hypotenuse given the opposite and adjacent side
 import math
 
 oposto = float (input ("Digite o valor do cateto oposto: "))
