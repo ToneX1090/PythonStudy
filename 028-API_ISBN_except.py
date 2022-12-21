@@ -5,16 +5,22 @@ arquivo = open(sys.argv[1] , "r")
 ISBN = arquivo.readlines()
 
 
-newarchive = open("IBSN_TITLE.txt" , "a")
+newarchive = open("IBSN_TITLE.txt" , "w")
 
 for linha in ISBN:
 
     realline = linha.strip()
-    database = requests.get("https://openlibrary.org/isbn/"+realline+".json")
-    json = database.json()
 
+    if len(realline) != 14 and len(realline)!= 10:
+
+        newarchive.write("\n" +realline+"  Este ISBN não é valido.") 
+
+    else:
+       
+        database = requests.get("https://openlibrary.org/isbn/"+realline+".json")
+        json = database.json()
     
-newarchive.write("Titulo: " ,json["title"])
+        newarchive.write("\nTitulo: " +json["title"])
 
 newarchive.close()
 
@@ -26,5 +32,21 @@ newarchive.close()
 #print("O livro buscado foi: " ,json["title"])
 #print("A editora é: " ,json["publishers"])
 
+#for linha in linhas:
+    #try:
+        #numero = int(linha)
+    #except:
+        #print (linha + "não é um numero")
+        #exit()
+
+    #sum_linha = sum_linha + numero
+
+#avg_linha = sum_linha / len(linhas)
+
+#print (avg_linha)
+
+
+#8476696531
+#978-8533613379
 
 #C:\Users\Milton\Documents\ISBN.txt
