@@ -16,37 +16,16 @@ for linha in ISBN:
         newarchive.write("\n" +realline+"  Este ISBN não é valido.") 
 
     else:
-       
-        database = requests.get("https://openlibrary.org/isbn/"+realline+".json")
-        json = database.json()
-    
-        newarchive.write("\nTitulo: " +json["title"])
+        #verificar se o json é valido
+        try:
+            database = requests.get("https://openlibrary.org/isbn/"+realline+".json")
+            json_validation = database.json()
+        except:
+            newarchive.write("\n" +realline+"  : Este ISBN não é valido.")
+        else:  
+            newarchive.write("\nTitulo: " +json_validation["title"])
 
 newarchive.close()
 
-
-#ISBN = sys.argv[1]
-#database = requests.get("https://openlibrary.org/isbn/"+ISBN+".json")
-#json = database.json()
-
-#print("O livro buscado foi: " ,json["title"])
-#print("A editora é: " ,json["publishers"])
-
-#for linha in linhas:
-    #try:
-        #numero = int(linha)
-    #except:
-        #print (linha + "não é um numero")
-        #exit()
-
-    #sum_linha = sum_linha + numero
-
-#avg_linha = sum_linha / len(linhas)
-
-#print (avg_linha)
-
-
-#8476696531
-#978-8533613379
 
 #C:\Users\Milton\Documents\ISBN.txt
