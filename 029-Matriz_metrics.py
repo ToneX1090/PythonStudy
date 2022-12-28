@@ -1,15 +1,15 @@
 lists = [[3,5,7,9],[4,5,2,6],[1,4,5,5]]
 list_number = []
+average_list = []
 
 for list in lists:
+    list_number += list
 
-    avg_list = sum(list) / len(list)
-    
-    for element in list:
-        if element > avg_list:
-            list_number.append(element)
-    
+average = sum(list_number) / len(list_number)
 
-    print(len(list_number), "numeros estão acima da média",avg_list)
-    print(list_number)
-    list_number = [] 
+for element in list_number:
+    if element > average:
+        average_list.append(element)
+
+print(len(average_list), "numeros estão acima da média {:.1f} " .format(average))
+print(average_list)
