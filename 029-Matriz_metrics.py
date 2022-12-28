@@ -12,4 +12,4 @@ for list in lists:
 
     print(len(list_number), "numeros estão acima da média",avg_list)
     print(list_number)
-    list_number = []
+    list_number = [] 
