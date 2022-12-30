@@ -1,38 +1,25 @@
-lists = [["Xulapa",3,0,1,1,2],["Dodo",2,1,1,2],["Didico",1,4,1,2],["Galinho",2,4,2,2]]
+lists = [["Xulapa",3,0,1,1],["Dodo",2,1,1,2],["Didico",1,4,1,2],["Galinho",2,4,2,2]]
 dict = {}
+sort_dict = {}
 
 for list in range(len(lists)):
-    dict[lists[list][0]] = lists[list][1:]   
-  
-   
-
+    nome = lists[list][0]
+    gols = lists[list][1:]
+    media = sum(gols) / len(gols)
+    dict[nome] = media
+    sort_dict = sorted(dict, key = dict.get, reverse=True)
 
 print(dict)
+print(sort_dict)
 
-#     for striker in dict:
-#         striker = int(striker)
+#     sort_dict = sorted(dict, key = dict.get, reverse=True)
 
-#         sum_goals = sum(striker)
+#     for striker in sort_dict:
+#         final_striker[striker] = media
 
-    
-# print(sum_goals)
+# print(final_striker)
 
+# for striker in sorted(dict, key = dict.get, reverse=True):
+#     final_strikers = striker
 
-
-
-
-
-# list_number = []
-
-# for list in lists:
-
-#     avg_list = sum(list) / len(list)
-    
-#     for element in list:
-#         if element > avg_list:
-#             list_number.append(element)
-    
-
-#     print(len(list_number), "numeros estão acima da média",avg_list)
-#     print(list_number)
-#     list_number = []
+# print(final_strikers[:3])
