@@ -1,25 +1,20 @@
 lists = [["Xulapa",3,0,1,1],["Dodo",2,1,1,2],["Didico",1,4,1,2],["Galinho",2,4,2,2]]
-dict = {}
-sort_dict = {}
+dict_list = {}
+c = 1
 
 for list in range(len(lists)):
     nome = lists[list][0]
     gols = lists[list][1:]
     media = sum(gols) / len(gols)
-    dict[nome] = media
-    sort_dict = sorted(dict, key = dict.get, reverse=True)
+    dict_list[nome] = media#dict
 
-print(dict)
-print(sort_dict)
+sort_dict = sorted(dict_list.items(), key=lambda item: item[1], reverse=True)#lista
 
-#     sort_dict = sorted(dict, key = dict.get, reverse=True)
+striker_list = dict(sort_dict)
 
-#     for striker in sort_dict:
-#         final_striker[striker] = media
+for k,v in striker_list.items():
 
-# print(final_striker)
+    if c <= 3:
 
-# for striker in sorted(dict, key = dict.get, reverse=True):
-#     final_strikers = striker
-
-# print(final_strikers[:3])
+        print(f"O {c}º artilheiro é {k} com uma média de {v} gols")
+        c = c + 1
