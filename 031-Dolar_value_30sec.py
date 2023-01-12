@@ -5,8 +5,9 @@ import requests
 now = datetime.now()
 data = now.strftime("%d/%m/%Y %H:%M:%S")
 
-database = requests.get("https://hgbrasil.com/status/finance")
+database = requests.get("https://api.hgbrasil.com/finance?key=45550550")
+json = database.json()
 
 print(now)
 print(data)
-print(database)
+print(json["USD"])
