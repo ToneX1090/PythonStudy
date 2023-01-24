@@ -12,7 +12,7 @@ def search_dollar():
     cotacao = json["results"]["currencies"]["USD"]
 
    
-    print("O valor atual do dollar é : R$",cotacao["sell"])
+    print("O valor atual do dollar é : R$ {:.2f}" .format(cotacao["sell"]))
 
 while count != 0:
     
