@@ -24,6 +24,4 @@ while count != 0:
     time.sleep(30)
     count = count - 1
 
-
-#mostrar 2 numeros após a vorgula
 #melhorae vizualização da data
