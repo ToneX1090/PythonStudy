@@ -1,9 +1,15 @@
 import sys
 import requests
+import modulo023
 
-ISBN = sys.argv[1]
-database = requests.get("https://openlibrary.org/isbn/"+ISBN+".json")
-json = database.json()
+def title_edit():
 
-print("O livro buscado foi: " ,json["title"])
-print("A editora é: " ,json["publishers"])
+    ISBN = sys.argv[1]
+    database = requests.get("https://openlibrary.org/isbn/"+ISBN+".json")
+    json = database.json()
+
+    print("\nO livro buscado foi: " ,json["title"])
+    print("\nA editora é: " ,json["publishers"])
+
+title_edit()
+modulo023.function_ISBN()
