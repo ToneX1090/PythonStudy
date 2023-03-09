@@ -9,21 +9,7 @@ for i in range(colunas):
 
 
 print(" ")
+
 for i in range(linhas):
     
     print(ast)
-
-
-
-
-
-
-
-
-#ast = []
-
-#for i in range(colunas):
-    #ast.append("*")
-
-#for i in range(linhas):
-    #print(ast)
