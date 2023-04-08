@@ -13,6 +13,6 @@ while id_vendedor != "fim":
         vendedores[id_vendedor] = quantidade
 
     id_vendedor = input("Qual o ID do vendedor? ")
-
-for vendedor in vendedores:
-    print(f"O vendedor {vendedor} vendeu {vendedores.values(id_vendedor)} produtos.") 
+# se não colocar o .items() não é possivel iterar com k,v
+for k, v in vendedores.items():
+    print(f"O vendedor {k} vendeu {v} produtos.") 
