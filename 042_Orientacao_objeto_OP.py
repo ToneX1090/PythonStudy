@@ -1,23 +1,29 @@
 class pirata(object):
-    pass
 
-luffy = pirata()
-luffy.nome = "Monkey D. Luffy"
-luffy.fruta = "Gomu Gomu"
-luffy.recompensa = "3.300.000.000"
+    def __init__(self, nome, recompensa, fruta):
+        self.nome = nome
+        self.recompensa = recompensa
+        self.fruta = fruta
 
-print(f"O pirata {luffy.nome} comeu a {luffy.fruta} e tem uma recompensa de {luffy.recompensa} de Berries.")
+    def imprimir_cartaz(self):
+        print(f"O pirata {self.nome} tem uma recompensa de {self.recompensa}.")
 
-law = pirata()
-law.nome = "Trafalgar D. Law"
-law.fruta = "Ope Ope"
-law.recompensa = "3.000.000.000"
+    def pode_nadar(self):
+        if self.fruta:
+            print(f"O Pirata {self.nome} comeu a {self.fruta} No Mi e não pode nadar.")
+        else:
+            print(f"O pirata {self.nome} não comeu nenhuma Akuma no Mi e pode nadar tranquilo!")
 
-print(f"O pirata {law.nome} comeu a {law.fruta} e tem uma recompensa de {law.recompensa} de Berries.")
+luffy = pirata("Monkey D. Luffy","B$ 3.300.000.000","Gomu Gomu")
+law = pirata("Trafalgar D. Law","B$ 3.000.000.000", "Ope Ope")
+shanks = pirata("Shanks O Ruivo","B$ 4.048.900.000", False)
 
-shanks = pirata()
-shanks.nome = "Shanks O Ruivo"
-shanks.fruta = "No"
-shanks.recompensa = "4.048.900.000"
 
-print(f"O pirata {shanks.nome} comeu a {shanks.fruta} e tem uma recompensa de {shanks.recompensa} de Berries.")
+luffy.imprimir_cartaz()
+luffy.pode_nadar()
+
+law.imprimir_cartaz()
+law.pode_nadar()
+
+shanks.imprimir_cartaz()
+shanks.pode_nadar()
