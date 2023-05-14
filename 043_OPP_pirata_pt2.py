@@ -11,9 +11,16 @@ class pirata(object):
 |#colocar os supernovas
 luffy = pirata("Monkey D. Luffy", 3300000000,"Hito Hito", "rara", 4000)
 law = pirata("Trafalgar D. Law", 3000000000, "Ope Ope", "rara", 3000)
-shanks = pirata("Shanks O Ruivo", 4048900000, False, False, 4500)
-teach = pirata("Marchal D. Teach",3996000000, "Yami Yami", "Incomum", 4000)
-urogue = pirata("Monge Uroge", )
+urogue = pirata("Monge Uroge", 108000000 )
+kid = pirata("Eustass Kid", 3000000000,)
+hawkins = pirata("Basil Hawkins", 320000000,)
+drake = pirata("X Drake", 222000000,)
+apoo = pirata("Scratchmen Apoo", 350000000)
+killer = pirata("Killer", 162000000,)
+bonney = pirata("Jewelry Bonney", 140000000)
+bege = pirata("Capone Gang Bege", 138000000)
+zoro  = pirata("Roronoa Zoro", 1111000000)
+
     
 
  
