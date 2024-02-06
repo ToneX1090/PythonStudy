@@ -12,6 +12,5 @@ elif not re.search(r'[#!@%&$]', password):
     print("Para aumentar o nível da senha, coloque um caractere especial.")
 elif not any(c.isdigit() for c in password):
     print("Para aumentar o nível da senha, coloque um número.")
-
 else:
     print("Nivel de contrasenha forte.")
