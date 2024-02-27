@@ -6,11 +6,11 @@ def title_name(ISBN):
     database = requests.get("https://openlibrary.org/isbn/"+ISBN+".json")
     json = database.json()
 
-    title = json["title"]
-    Subtitle = json["subtitle"]
+    # full_title = json["full_title"]
     
-    #print("\nTitulo -" ,json["title"] ,json["subtitle"])
-title_name()
+    # return f"\nTitulo - {full_title}"
+    
+    return json
 
 archive=open(sys.argv[1], "r")
 books = archive.readlines()
@@ -18,5 +18,9 @@ books = archive.readlines()
 newarchive = open("Booktitles.txt" , "w")
     
 for book in books:
-    newarchive.write("\nTitulo -" ,json["title"] ,json["subtitle"]
+    #newarchive.write(title_name(book))
+    print(title_name(book))
 newarchive.close()
+
+
+#"C:\Users\Milton\Documents\isbn_book.txt"
