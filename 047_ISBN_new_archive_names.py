@@ -17,7 +17,8 @@ books = archive.readlines()
 newarchive = open("Booktitles.txt" , "w")
     
 for book in books:
-    title_name(book)
+    realbook = book.strip()
+    title_name(realbook)
 newarchive.close()
 
 
