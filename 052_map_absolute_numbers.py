@@ -1,4 +1,8 @@
-negative_list = [-2, -4, -10, -5]
+input_list= input("Digite uma lista de numeros negativos: ")
+user_list = input_list.split()
+
+int_numbers = map (int, user_list)
+negative_list = list(int_numbers)
 
 absolute_numbers = map(abs, negative_list)
 
