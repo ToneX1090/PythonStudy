@@ -6,25 +6,33 @@ class Player(object):
 
 class Team(object):
 
-    def __init__(self,nome, players):
+    def __init__(self,nome):
         self.teamname = nome
         self.players = []
     
-    def add_player(self):
-        #develop
+    def add_player(self, player):
+        self.players.append(player)
     
-    def print_player(self):
-        print(f"O jogador {self.name} tem {self.age} anos.")
+    def print_players(self):
+        print(f"Jogadores do {self.teamname}:")
+        for player in self.players:
+            print(player.name)
+
+team = Team("Coringão")
+
+team.add_player(Player("Cassio", 34))
+team.add_player(Player("Gamarra", 53))
+team.add_player(Player("Chicão", 43))
+team.add_player(Player("José Maria", 75))
+team.add_player(Player("Roberto Carlos", 51))
+team.add_player(Player("Freddy Rincon", 50))
+team.add_player(Player("Sócrates", 58))
+team.add_player(Player("Marcelo Pereira", 52))
+team.add_player(Player("CRAQUE Neto", 57))
+team.add_player(Player("Ronaldo", 47))
+team.add_player(Player("Carlitos Tevez", 40))
+
+team.print_players()
 
 
-Cassio = Player("Cassio", 34)
-Gamarra = Player("Gamarra", 53)
-Chicao = Player("Chicão", 43)
-Ze_Maria = Player("José Maria", 75)
-Roberto_Carlos = Player("Roberto Carlos", 51)
-Rincon = Player("Freddy Rincon", 50)
-Socrates = Player("Sócrates", 58)
-Marcelinho = Player("Marcelo Pereira", 52)
-Neto = Player("CRAQUE Neto", 57)
-Fenomeno = Player("Ronaldo", 47)
-Tevez = Player("Carlitos Tevez", 40)
+
