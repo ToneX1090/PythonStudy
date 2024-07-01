@@ -1,29 +1,29 @@
 class pirata(object):
 
-    def __init__(self, nome, recompensa, fruta):
-        self.nome = nome
-        self.recompensa = recompensa
-        self.fruta = fruta
+    def __init__(self, name, reward, frute):
+        self.name = name
+        self.reward = reward
+        self.frute = frute
 
-    def imprimir_cartaz(self):
-        print(f"O pirata {self.nome} tem uma recompensa de {self.recompensa}.")
+    def print_poster(self):
+        print(f"O pirata {self.name} tem uma recompensa de {self.reward}.")
 
-    def pode_nadar(self):
-        if self.fruta:
-            print(f"O Pirata {self.nome} comeu a {self.fruta} No Mi e não pode nadar.")
+    def can_swim(self):
+        if self.frute:
+            print(f"O Pirata {self.name} comeu a {self.frute} No Mi e não pode nadar.")
         else:
-            print(f"O pirata {self.nome} não comeu nenhuma Akuma no Mi e pode nadar tranquilo!")
+            print(f"O pirata {self.name} não comeu nenhuma Akuma no Mi e pode nadar tranquilo!")
 
 luffy = pirata("Monkey D. Luffy","B$ 3.300.000.000","Gomu Gomu")
 law = pirata("Trafalgar D. Law","B$ 3.000.000.000", "Ope Ope")
 shanks = pirata("Shanks O Ruivo","B$ 4.048.900.000", False)
 
 
-luffy.imprimir_cartaz()
-luffy.pode_nadar()
+luffy.print_poster()
+luffy.can_swim()
 
-law.imprimir_cartaz()
-law.pode_nadar()
+law.print_poster()
+law.can_swim()
 
-shanks.imprimir_cartaz()
-shanks.pode_nadar()
+shanks.print_poster()
+shanks.can_swim()
