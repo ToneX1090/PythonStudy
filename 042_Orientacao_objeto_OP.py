@@ -1,16 +1,16 @@
 class pirata(object):
 
-    def __init__(self, name, reward, frute):
+    def __init__(self, name, reward, fruit):
         self.name = name
         self.reward = reward
-        self.frute = frute
+        self.fruit = fruit
 
     def print_poster(self):
         print(f"O pirata {self.name} tem uma recompensa de {self.reward}.")
 
     def can_swim(self):
-        if self.frute:
-            print(f"O Pirata {self.name} comeu a {self.frute} No Mi e não pode nadar.")
+        if self.fruit:
+            print(f"O Pirata {self.name} comeu a {self.fruit} No Mi e não pode nadar.")
         else:
             print(f"O pirata {self.name} não comeu nenhuma Akuma no Mi e pode nadar tranquilo!")
 
