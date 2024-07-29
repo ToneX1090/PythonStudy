@@ -11,14 +11,21 @@ class Championship(object):
     def add_team(self, team):
         self.table.append(team)
 
-    def first_round()
+    def games():
         #criar um laço que mantém fixo o primeiro time e o compara com todos os outros
+
+        # for team in range(len(self.table)):
+
+        #     if team1.name == team2.name:
+        #         #pass
+        #     else:
+                
 
         # Simular todos os jogos
             # for i in range(len(self.table)):
             #     for j in range(i + 1, len(self.table)):
-            #         team1 = teams[i]
-            #         team2 = teams[j]
+            #         team1 = self.table[i]
+            #         team2 = self.table[j]
 
 
 
