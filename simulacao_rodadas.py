@@ -4,13 +4,16 @@ times = ["Flamengo", "Botafogo", "Palmeiras", "Fortaleza", "Cruzeiro", "São Pau
 
 
 
+while times >= range(2):
 
-for i in range(len(times)):
-    for j in range(i + 1, len(times)):
-        team1 = times[i]
-        team2 = times[j]
+    for i in range(len(times)):
+        for j in range(i + 1, len(times)):
+            away = times[i]
+            home = times[j]
 
-    print(f"{team2} x {team1}")
+        print(f"{home} x {away}")
+    
+    times.remove[j]
     
 
 
@@ -25,3 +28,20 @@ for i in range(len(times)):
 #         time2 = times[visita + 1]
     
 #         print(f"{time1} x {time2}")
+
+############################################
+
+# pseudocodigo aqui:
+
+# simular_campeonato():
+#     for rodada in range(self.num_rodadas):
+#         simular_rodada()
+
+# simular_rodada():
+#     jogos = montar_jogos()
+
+#     for jogo in jogos:
+#         executar_jogo()
+
+# montar_jogos():
+#     # TODO: implementar
